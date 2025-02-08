@@ -27,9 +27,9 @@
 
     <!-- แสดงผลการตรวจสอบ -->
     <div th:if="${result}">
-        {% comment %} <p>อาหารประเภท: <span th:text="${food.type}"></span></p> {% endcomment %}
+        <p>อาหารประเภท: <span th:text="${resultFood.type}"></span></p>
         <p style="color: green;" th:text="${result}"></p>
-        {% comment %} <p>วันเดือนปี <span th:text="${food.expiryDate}"></span></p> {% endcomment %}
+        <p>วันเดือนปี <span th:text="${resultFood.expiryDate}"></span></p>
     </div>
 
     <hr>

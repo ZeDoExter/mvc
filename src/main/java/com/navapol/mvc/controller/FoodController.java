@@ -32,6 +32,8 @@ public class FoodController {
                 model.addAttribute("error", "รหัสอาหารไม่พบในฐานข้อมูล");
             } else {
                 String result = foodService.checkFoodExpiry(foodId);
+                Food resultFood = foodService.getFoodById(foodId).get();
+                model.addAttribute("resultFood", resultFood);
                 model.addAttribute("result", result);
             }
         }
