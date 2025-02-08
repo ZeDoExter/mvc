@@ -28,8 +28,8 @@
     <!-- แสดงผลการตรวจสอบ -->
     <div th:if="${result}">
         <p>อาหารประเภท: <span th:text="${resultFood.type}"></span></p>
-        <p style="color: green;" th:text="${result}"></p>
-        <p>วันเดือนปี <span th:text="${resultFood.expiryDate}"></span></p>
+        <p>หมดอายุ: <span style="color: green;" th:text="${result}"></span></p>
+        <p>วันเดือนปี: <span th:text="${resultFood.expiryDate}"></span></p>
     </div>
 
     <hr>

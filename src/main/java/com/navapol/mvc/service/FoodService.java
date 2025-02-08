@@ -40,7 +40,7 @@ public class FoodService {
     
         for (Food food : foods) {
             if (food.getType() == null) {
-                continue; // ข้ามการประมวลผลถ้า type เป็น null
+                continue;
             }
             switch (food.getType()) {
                 case FRESH:

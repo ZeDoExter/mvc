@@ -30,12 +30,12 @@ public class FoodRepositoryImpl implements FoodRepository {
             .of(Food.class, "type")
             .registerSubtype(FreshFood.class, "FRESH")
             .registerSubtype(PickledFood.class, "PICKLED")
-            .registerSubtype(CannedFood.class, "CANNED");
+            .registerSubtype(CannedFood.class, "CANNED"); 
 
     private final Gson gson = new GsonBuilder()
             .registerTypeAdapterFactory(foodAdapterFactory)
             .registerTypeAdapter(LocalDate.class, new LocalDateAdapter())
-            .create();
+            .create(); 
     
 
     private final Type foodListType = new TypeToken<List<Food>>() {}.getType();
@@ -60,6 +60,8 @@ public class FoodRepositoryImpl implements FoodRepository {
             System.out.println("No existing database, starting fresh");
         }
     }
+
+    //generate random foods
     
 
     private void generateRandomFoods(int count) {
@@ -105,6 +107,7 @@ public class FoodRepositoryImpl implements FoodRepository {
         }
     }
     
+    //implement methods from FoodRepository
 
     @Override
     public List<Food> findAll() {
